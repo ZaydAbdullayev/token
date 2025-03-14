@@ -1,0 +1,113 @@
+/* @import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
+html {
+  height: 100%;
+  display: flex;
+}
+body {
+  margin: auto;
+}
+html,
+body {
+  width: 100%;
+  background: #222;
+  color: #fff;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+li {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+article {
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.splitting .char {
+  display: inline-block;
+  font-size: 1em;
+  animation: slide-in 0.35s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(55ms * var(--char-index));
+}
+
+h1.splitting {
+  color: saturate(lighten(#182952,55%),60%);
+  .char {
+    transition: transform .3s cubic-bezier(.3, 0, .3, 1), opacity .3s linear;
+    transition-delay: calc( 20ms * var(--char-index) );
+
+  }
+
+  &[data-scroll="out"] .char {
+    opacity: 0.1;
+    transform: translateY( .25em );
+  }
+}
+
+
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-49vh) rotate(-1.5turn) scale(0.5);
+    opacity: 0;
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #eee;
+}
+
+span {
+	font-size: 10vw;
+	text-decoration: none;
+	font-weight: 100;
+	letter-spacing: -3px;
+	animation: weight 2s infinite;
+	animation-delay: calc(var(--char-index) * 150ms);
+}
+
+@keyframes weight {
+	from {
+		font-weight: 100;
+	}
+
+	50% {
+		font-weight: 900 ;
+	}
+
+	to {
+		font-weight: 100;
+	}
+}

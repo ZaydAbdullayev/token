@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100vmax / 1600 * 100;
+  @media (max-width: 992px) {
+    font-size: 60px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ececec;
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app{
+    overflow: hidden;
+}
+
+.number {
+  color: transparent;
+  background-image: linear-gradient(#f7e064, #dc7b5a);
+  background-clip: text;
+  -webkit-box-reflect: below 2px linear-gradient(transparent 30%, rgba(0,0,0,0.5));
+  border-left: below 2px linear-gradient(transparent 30%, rgba(0,0,0,0.5));
+}
+
+.deco-dot {
+  position: absolute;
+  z-index: -1;
+  animation: dot-move 30s both linear infinite;
+  &.dot-1 {
+    left: 2rem;
+    bottom: -0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem 2.2rem 2.8rem 3.6rem;
+    background-image: linear-gradient(to right, #ffefd4, #eedeb4);
+    transform-origin: 40% 50%;
+  }
+  &.dot-2 {
+    left: 4.2rem;
+    top: -1.5rem;
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 3.6rem 5rem 4rem 3rem;
+    background-image: linear-gradient(to right, #d8e4eb, #cde9f9);
+    animation-direction: reverse;
+    animation-duration: 40s;
+    transform-origin: 55% 65%;
+  }
+  &.dot-3 {
+    right: 4rem;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2.5rem 2.2rem 2.8rem 3.6rem;
+    background-image: linear-gradient(to right, #daece2, #bee9d1);
+    animation-duration: 35s;
+    transform-origin: 40% 30%;
+  }
+}
+
+.deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  &.bottom {
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    flex-direction: column-reverse;
+    transform: rotateY(180deg);
+  }
+  .line {
+    width: 5rem;
+    height: 0.2rem;
+    border-radius: 0 12px 12px 0;
+    background-image: linear-gradient(to right, #b7e4e0, #59ddcf);
+    margin: 0.1rem 0;
+    &:nth-child(2) {
+      width: 4rem;
+    }
+    &:nth-child(3) {
+      width: 3rem;
+    }
+  }
+}
+
+@keyframes dot-move {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+// splitting
+.splitting .word,
+.splitting .char {
+  color: inherit;
+  background-image: inherit;
+  background-clip: inherit;
+}
+.splitting .char {
+  animation: wave 1.2s both infinite;
+  animation-delay: calc(50ms * var(--char-index));
+}
+
+@keyframes wave {
+  20% {
+    transform: translateY(-0.07rem);
+  }
+  0%, 40% {
+    transform: translateY(0);
+  }
+}
