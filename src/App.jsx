@@ -28,21 +28,55 @@ function App() {
 
   return (
     <div className="wrapper">
-      {visible && (
-        <nav
-          className="navbar"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <h1 className="navbar__title">$QC</h1>
+      <nav
+        className="navbar"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-delay="3000"
+        data-aos-offset="0"
+      >
+        <h1 className="navbar__title">
+          <FlotiongText text="$QC" />
+        </h1>
+        {visible && (
           <div className="links">
-            <Button1 icon={<FaChartArea />} text="Chart" />
-            <Button1 icon={<BsTwitterX />} />
-            <Button1 icon={<FaTelegramPlane />} text="Telegram" />
+            <Button1
+              icon={<FaChartArea />}
+              text="Chart"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              onclick={() =>
+                window.open(
+                  "https://dexscreener.com/solana/znv3FZt2HFAvzYf5LxzVyryh3mBXWuTRRng25gEZAjh",
+                  "_blank"
+                )
+              }
+            />
+            <Button1
+              icon={<BsTwitterX />}
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="100"
+              data-aos-offset="0"
+            />
+            <Button1
+              icon={<FaTelegramPlane />}
+              text="Telegram"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="200"
+              data-aos-offset="0"
+            />
           </div>
-        </nav>
-      )}
+        )}
+      </nav>
+      <div className="_site-info">
+        <FlippingText text="to the future of decentralized finance" />
+      </div>
+      <div className="footer">
+        <p>© 2021 QC</p>
+      </div>
+
       <SplittingLoader />
     </div>
   );

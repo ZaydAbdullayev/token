@@ -3,10 +3,7 @@
 
 .headline {
   font-family: "Lexend Deca", sans-serif;
-  font-weight: 700;
-  font-size: calc(1rem + 15vmin);
-  overflow: hidden;
-  //   perspective: 1000px;
+  font-size: 20px;
 }
 h2 span {
   font-size: 28px;
@@ -208,7 +205,7 @@ h2 span {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin: 25px 15px;
+  margin: 0px 15px;
   min-width: 150px;
 }
 .btn span {
@@ -255,7 +252,7 @@ h2 span {
 .btn.hover-border-2::before {
   bottom: 0;
   left: 0;
-  border-left: 1px solid rgba(0, 255, 0, 0.9);
+  border-left: 1px solid #00ff00;
   border-bottom: 1px solid rgba(0, 255, 0, 0.9);
 }
 .btn.hover-border-2::after {
@@ -332,37 +329,37 @@ h2 span {
   height: 100%;
   z-index: 9999;
   animation: fadeOut 1s 4s forwards;
-  background: rgba(0, 255, 0, 0.9);
+  background: #00ff00e6;
 }
 
 @keyframes fadeOut {
-  to {
-    opacity: 0;
+  20% {
+    background: transparent;
+  }
+  100% {
     visibility: hidden;
+    z-index: -1;
   }
 }
 
-.course-clear {
+.loader-container .course-clear {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
   font-size: 10vw;
-  @media (min-width: 800px) {
-    font-size: 80px;
-  }
   text-align: center;
   color: rgb(0, 255, 0);
   text-transform: uppercase;
 }
 
-.click {
+.loader-container .click {
   font-size: 12px;
   animation: text-fade 1s linear 6s backwards;
 }
 
-.course-clear {
+.loader-container .course-clear {
   font-size: 10vw;
   @media (min-width: 800px) {
     font-size: 80px;
@@ -410,17 +407,18 @@ h2 span {
   }
 }
 
-.splitting.cells {
+.loader-container .splitting.cells {
   grid-area: 1/1;
 }
 
-.splitting.cells,
-.splitting .cell-grid {
+.loader-container .splitting.cells,
+.loader-container .splitting .cell-grid {
   width: 100vw;
   height: 100vh;
 
   .cell {
     background: #040404;
+    border-left: 1px solid #060606;
     visibility: visible;
     margin: 0 -1px;
     animation: slide-in 2s linear 2 alternate both;

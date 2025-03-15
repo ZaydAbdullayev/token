@@ -1,8 +1,9 @@
 .wrapper {
   width: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
   overflow-y: auto;
 }
 
@@ -11,8 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1% 4%;
+  padding: 2% 4%;
 }
 
-.navbar__title {
+.navbar__title h2 {
+  color: #0f0;
 }
