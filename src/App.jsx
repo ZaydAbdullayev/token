@@ -1,60 +1,50 @@
-import { useEffect } from "react";
-import "./App.css";
-import "./main.scss";
+import React, { useEffect, useState } from "react";
+import "./app.css";
+import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
+import {
+  FlotiongText,
+  FallingText,
+  FlippingText,
+  JoggingText,
+  SplittingLoader,
+} from "./components/text.animation";
+import { Button1, Button6 } from "./components/button.components";
+import { FaTelegramPlane, FaChartArea } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 function App() {
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     Splitting();
+
+    // have to wait 3s before making the text visible
+    setTimeout(() => {
+      setVisible(true);
+    }, 5000);
   }, []);
 
   return (
-    <>
-      <span data-splitting="chars">Variable Fonts!</span>
-      {/* <ul>
-        <li>
-          <article data-splitting>
-            <p>
-              Wow, Splitting.js is pretty cool...
-              <br />
-              and surprising easy to use.
-            </p>
-          </article>
-        </li>
-        <li>
-          <h1 data-splitting>ScrollOut + Splitting.js</h1>
-        </li>
-      </ul> */}
-      {/* <h1 data-splitting>Split by chars (default)</h1>
-      <p data-splitting="words">Split by words</p>
-      <ul data-splitting="items">
-        <li>Split</li>
-        <li>by</li>
-        <li>children!</li>
-      </ul> */}
-      {/* <main className="container">
-        <h2 data-splitting className="headline headline--jump">
-          jumping
-        </h2>
-        <h2 data-splitting className="headline headline--float">
-          floating
-        </h2>
-        <h2 data-splitting className="headline headline--jog">
-          jogging
-        </h2>
-        <h2 data-splitting className="headline headline--flip">
-          flipping
-        </h2>
-        <h2 data-splitting className="headline headline--twirl">
-          twirling
-        </h2>
-        <h2 data-splitting className="headline headline--fall">
-          falling
-        </h2>
-      </main> */}
-    </>
+    <div className="wrapper">
+      {visible && (
+        <nav
+          className="navbar"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          <h1 className="navbar__title">$QC</h1>
+          <div className="links">
+            <Button1 icon={<FaChartArea />} text="Chart" />
+            <Button1 icon={<BsTwitterX />} />
+            <Button1 icon={<FaTelegramPlane />} text="Telegram" />
+          </div>
+        </nav>
+      )}
+      <SplittingLoader />
+    </div>
   );
 }
 
