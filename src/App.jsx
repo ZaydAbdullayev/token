@@ -273,7 +273,11 @@ function App() {
               </div>
 
               <div className="input-box">
-                <div className="input-label">
+                <div
+                  className="input-label"
+                  data-aos="fade-right"
+                  data-aos-duration="700"
+                >
                   <span>24h Volume (USD)</span>
                   <label>
                     <span>$</span>
@@ -296,7 +300,11 @@ function App() {
                     </div>
                   </label>
                 </div>
-                <div className="input-label">
+                <div
+                  className="input-label"
+                  data-aos="fade-left"
+                  data-aos-duration="700"
+                >
                   <span>Your $IMG Holdings</span>
                   <label>
                     <span>$QC</span>
@@ -321,7 +329,11 @@ function App() {
                     </div>
                   </label>
                 </div>
-                <div className="result">
+                <div
+                  className="result"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div className="result-item">
                     <span>Daily Rewards Pool</span>
                     <span>${dailyPool}</span>
@@ -341,7 +353,11 @@ function App() {
                     </span>
                   </div>
                 </div>
-                <div className="note">
+                <div
+                  className="note"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <Signal />
                   <p>
                     * Calculations based on current trading volume and token
