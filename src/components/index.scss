@@ -313,12 +313,12 @@ h2 span {
   height: 100%;
   z-index: 9999;
   animation: fadeOut 1s 4s forwards;
-  background: #00ff00e6;
+  background: #00ff00;
 }
 
 @keyframes fadeOut {
   20% {
-    background: transparent;
+    background: #040404;
   }
   100% {
     visibility: hidden;
@@ -449,7 +449,7 @@ h2 span {
     transform: scale(1);
   }
   100% {
-    transform: scale(2);
+    transform: scale(3);
     opacity: 0;
   }
 }
