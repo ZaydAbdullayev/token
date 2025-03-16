@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./app.css";
+import "./home.css";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
@@ -15,7 +15,7 @@ import { LuGitBranchPlus } from "react-icons/lu";
 import { getCryptoPrices } from "./context/fetch.service";
 import { useCryptoEarnings, calculatePercentage } from "./context/calc.service";
 
-function App() {
+export const App = () => {
   const [visible, setVisible] = useState(false);
   const [price, setPrice] = useState(0);
   const [volume24h, setVolume24h] = useState(100000);
@@ -890,6 +890,4 @@ function App() {
       <SplittingLoader />
     </div>
   );
-}
-
-export default App;
+};
