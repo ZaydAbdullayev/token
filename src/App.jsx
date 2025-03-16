@@ -5,8 +5,6 @@ import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import {
   FlotiongText,
-  FallingText,
-  FlippingText,
   JoggingText,
   SplittingLoader,
 } from "./components/text.animation";
