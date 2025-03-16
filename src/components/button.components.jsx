@@ -19,3 +19,7 @@ export const Button6 = ({ icon, text, onclick, ...props }) => {
     </button>
   );
 };
+
+export const Signal = () => {
+  return <span class="signal"></span>;
+};

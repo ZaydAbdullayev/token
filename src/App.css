@@ -1,9 +1,10 @@
 .wrapper {
-  width: 100%;
+  width: 100vw;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  align-items: center;
+  gap: 100px;
   overflow-y: auto;
 }
 
@@ -12,9 +13,138 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 4%;
+  padding: 2% 6%;
 }
 
 .navbar__title h2 {
   color: #0f0;
+}
+
+._site-info {
+  width: 50%;
+  padding: 0 6%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    margin-top: 30px;
+  }
+}
+
+.rewards {
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+._title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f0;
+  font-size: 18px;
+  > p {
+    inline-size: 90%;
+  }
+}
+
+.rewards_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+._header {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.system-info {
+  width: 35%;
+  padding: 1% 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px dashed #0f0;
+
+  > p {
+    font-size: 14px;
+  }
+}
+
+.tree-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  ._title {
+    width: 100%;
+  }
+}
+
+.box {
+  position: relative;
+  width: calc(25% - 15px);
+  border: 1px dashed #0f0;
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  p {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    inline-size: calc(100% - 30px);
+    z-index: 9;
+  }
+}
+
+.box-bg {
+  font-size: 50px;
+  color: #0f02;
+}
+
+/* border animation */
+@keyframes border {
+  0% {
+    border: 1px dashed #0f0;
+  }
+
+  50% {
+    border: 1px solid #0f0;
+    box-shadow: 1px 1px 20px #0f03;
+  }
+
+  100% {
+    border: 1px dashed #0f0;
+  }
+}
+
+.box:hover {
+  animation: border 1s infinite;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 6%;
+  background-color: #222;
+  color: #999;
 }
