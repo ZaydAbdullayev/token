@@ -97,7 +97,7 @@ function App() {
             data-aos-duration="700"
             onclick={() =>
               window.open(
-                "https://dexscreener.com/solana/znv3FZt2HFAvzYf5LxzVyryh3mBXWuTRRng25gEZAjh",
+                "https://phantom.com/learn/crypto-101/what-is-a-crypto-wallet",
                 "_blank"
               )
             }
