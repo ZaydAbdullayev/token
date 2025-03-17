@@ -10,7 +10,7 @@ export const useCryptoEarnings = ({ volume24h, userHoldings, rewardPercentage, s
         const dailyPool = (volume24h * rewardPercentage) / 100;
 
         // Kullanıcının günlük kazancı
-        const percennageOfHoldings = calculatePercentage(userHoldings, 1000);
+        const percennageOfHoldings = userHoldings / 1000;
         const dailyEarningsUSD = dailyPool / percennageOfHoldings; // Sabit katsayı ile hesaplama
         const dailyEarningsSOL = dailyEarningsUSD / solPrice;
 
