@@ -90,12 +90,7 @@ export const App = () => {
               text="Chart"
               data-aos="fade-up"
               data-aos-duration="700"
-              onclick={() =>
-                window.open(
-                  "https://dexscreener.com/solana/znv3FZt2HFAvzYf5LxzVyryh3mBXWuTRRng25gEZAjh",
-                  "_blank"
-                )
-              }
+              onclick={() => window.open("https://dexscreener.com/", "_blank")}
             />
             <Button1
               icon={<BsTwitterX />}
@@ -103,14 +98,9 @@ export const App = () => {
               data-aos-duration="700"
               data-aos-delay="100"
               data-aos-offset="0"
-            />
-            <Button1
-              icon={<FaTelegramPlane />}
-              text="Telegram"
-              data-aos="fade-up"
-              data-aos-duration="700"
-              data-aos-delay="200"
-              data-aos-offset="0"
+              onclick={() =>
+                window.open("https://x.com/quantumcash_sol", "_blank")
+              }
             />
           </div>
         )}
@@ -127,8 +117,8 @@ export const App = () => {
           <>
             <div className="_title" data-aos="fade-up" data-aos-duration="700">
               <p>
-                $QC is a Solana token that rewards holders with automatic Solana
-                every 5 minutes.
+                $QC is a Solana token that rewards holders with automatic
+                Solana every 5 minutes.
               </p>
             </div>
 
@@ -157,7 +147,7 @@ export const App = () => {
         >
           <div className="_header">
             <FlotiongText
-              text="Automatic Soloana rewards"
+              text="Automatic Solana rewards"
               data-aos="fade-up"
               data-aos-duration="700"
               data-aos-delay="3000"
@@ -303,7 +293,7 @@ export const App = () => {
                   data-aos="fade-left"
                   data-aos-duration="700"
                 >
-                  <span>Your $IMG Holdings</span>
+                  <span>Your $QC Holdings</span>
                   <label>
                     <span>$QC</span>
                     <input
@@ -575,7 +565,7 @@ export const App = () => {
                 data-aos-delay="1200"
                 data-aos-offset="0"
               >
-                Earn Solana just by holding $IMG tokens in your wallet
+                Earn Solana just by holding $QC tokens in your wallet
               </p>
             </div>
             <div
@@ -646,8 +636,8 @@ export const App = () => {
                 <p>COMMUNITY.OWNED</p>
               </div>
               <p>
-                $QC is 100% community-owned with no team tokens, no presale, and
-                no max wallet limits. The 5% tax on transactions is
+                $QC is 100% community-owned with no team tokens, no presale,
+                and no max wallet limits. The 5% tax on transactions is
                 automatically distributed as Solana rewards.
               </p>
             </div>
@@ -738,7 +728,7 @@ export const App = () => {
               <p>
                 The 5% tax on transactions is automatically converted to Solana
                 and distributed to all holders every 5 minutes. This creates a
-                passive income stream just by holding $IMG tokens in your
+                passive income stream just by holding $QC tokens in your
                 wallet.
               </p>
             </div>
